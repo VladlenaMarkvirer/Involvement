@@ -24,9 +24,6 @@ public class Photo implements Serializable {
     @JoinColumn(name = "person_id", referencedColumnName = "id")
     private Person personPhoto;
 
-    @OneToMany(mappedBy = "photoGallery", fetch = FetchType.EAGER)
-    private Collection<Gallery> galleryCollection;
-
     public Photo() {
     }
 
@@ -60,14 +57,6 @@ public class Photo implements Serializable {
 
     public void setPersonPhoto(Person personPhoto) {
         this.personPhoto = personPhoto;
-    }
-
-    public Collection<Gallery> getGalleryCollection() {
-        return galleryCollection;
-    }
-
-    public void setGalleryCollection(Collection<Gallery> galleryCollection) {
-        this.galleryCollection = galleryCollection;
     }
 
 }

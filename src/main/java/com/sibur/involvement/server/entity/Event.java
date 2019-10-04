@@ -45,15 +45,6 @@ public class Event implements Serializable {
     @JoinColumn(name = "person_id_owner", referencedColumnName = "id")
     private Person personEvent;
 
-    @OneToMany(mappedBy = "eventPart", fetch = FetchType.EAGER)
-    private Collection<Part> partCollection;
-
-    @OneToMany(mappedBy = "eventNote", fetch = FetchType.EAGER)
-    private Collection<Note> noteCollection;
-
-    @OneToMany(mappedBy = "eventGallery", fetch = FetchType.EAGER)
-    private Collection<Gallery> galleryCollection;
-
     public Event() {
     }
 
@@ -127,30 +118,6 @@ public class Event implements Serializable {
 
     public void setPersonEvent(Person personEvent) {
         this.personEvent = personEvent;
-    }
-
-    public Collection<Part> getPartCollection() {
-        return partCollection;
-    }
-
-    public void setPartCollection(Collection<Part> partCollection) {
-        this.partCollection = partCollection;
-    }
-
-    public Collection<Note> getNoteCollection() {
-        return noteCollection;
-    }
-
-    public void setNoteCollection(Collection<Note> noteCollection) {
-        this.noteCollection = noteCollection;
-    }
-
-    public Collection<Gallery> getGalleryCollection() {
-        return galleryCollection;
-    }
-
-    public void setGalleryCollection(Collection<Gallery> galleryCollection) {
-        this.galleryCollection = galleryCollection;
     }
 
 }

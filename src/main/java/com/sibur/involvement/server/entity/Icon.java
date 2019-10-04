@@ -20,9 +20,6 @@ public class Icon implements Serializable {
     @Column(name = "icon", nullable = false)
     private byte[] icon;
 
-    @OneToMany(mappedBy = "icon", fetch = FetchType.EAGER)
-    private Collection<Category> categoryCollection;
-
     public Icon() {
     }
 
@@ -50,11 +47,4 @@ public class Icon implements Serializable {
         this.icon = icon;
     }
 
-    public Collection<Category> getCategoryCollection() {
-        return categoryCollection;
-    }
-
-    public void setCategoryCollection(Collection<Category> categoryCollection) {
-        this.categoryCollection = categoryCollection;
-    }
 }

@@ -1,0 +1,7 @@
+---
+applications:
+ - name: Involvement
+   random-route: true
+   path: target/com.sibur.involvement.server-1.0-SNAPSHOT.war
+   memory: 256M
+   buildpack: java_buildpack

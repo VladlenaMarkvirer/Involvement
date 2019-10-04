@@ -28,9 +28,6 @@ public class Note implements Serializable {
     @Column(name="isanonimus")
     private boolean isanonimus = false;
 
-    @OneToMany(mappedBy = "notePackage", fetch = FetchType.EAGER)
-    private Collection<Package> packageCollectionCollection;
-
     @ManyToOne(optional = false, cascade = CascadeType.ALL)
     @JoinColumn(name = "event_id", referencedColumnName = "id")
     private Event eventNote;
@@ -80,14 +77,6 @@ public class Note implements Serializable {
 
     public void setText(String text) {
         this.text = text;
-    }
-
-    public Collection<Package> getPackageCollectionCollection() {
-        return packageCollectionCollection;
-    }
-
-    public void setPackageCollectionCollection(Collection<Package> packageCollectionCollection) {
-        this.packageCollectionCollection = packageCollectionCollection;
     }
 
     public Event getEventNote() {

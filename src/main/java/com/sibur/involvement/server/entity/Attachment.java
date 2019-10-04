@@ -18,9 +18,6 @@ public class Attachment implements Serializable {
     @Column(name = "file", nullable = false)
     private byte[] file;
 
-    @OneToMany(mappedBy = "attachment", fetch = FetchType.EAGER)
-    private Collection<Package> packageCollection;
-
     public Attachment() {
     }
 
@@ -40,11 +37,4 @@ public class Attachment implements Serializable {
         this.file = file;
     }
 
-    public Collection<Package> getPackageCollection() {
-        return packageCollection;
-    }
-
-    public void setPackageCollection(Collection<Package> packageCollection) {
-        this.packageCollection = packageCollection;
-    }
 }

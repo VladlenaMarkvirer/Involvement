@@ -42,18 +42,6 @@ public class Person implements Serializable {
     @Column(name="spent", scale = 2)
     private java.math.BigDecimal spent = java.math.BigDecimal.valueOf(0.0);
 
-    @OneToMany(mappedBy = "personEvent", fetch = FetchType.EAGER)
-    private Collection<Event> eventCollection;
-
-    @OneToMany(mappedBy = "personPart", fetch = FetchType.EAGER)
-    private Collection<Part> partCollection;
-
-    @OneToMany(mappedBy = "personNote", fetch = FetchType.EAGER)
-    private Collection<Note> noteCollection;
-
-    @OneToMany(mappedBy = "personPhoto", fetch = FetchType.EAGER)
-    private Collection<Photo> photoCollection;
-
     public Role getRole() {
         return role;
     }
@@ -67,14 +55,6 @@ public class Person implements Serializable {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public Collection<Photo> getPhotoCollection() {
-        return photoCollection;
-    }
-
-    public void setPhotoCollection(Collection<Photo> photoCollection) {
-        this.photoCollection = photoCollection;
     }
 
     public void setName(String name) {
@@ -135,30 +115,6 @@ public class Person implements Serializable {
 
     public BigDecimal getSpent() {
         return spent;
-    }
-
-    public Collection<Event> getEventCollection() {
-        return eventCollection;
-    }
-
-    public void setEventCollection(Collection<Event> eventCollection) {
-        this.eventCollection = eventCollection;
-    }
-
-    public Collection<Part> getPartCollection() {
-        return partCollection;
-    }
-
-    public void setPartCollection(Collection<Part> partCollection) {
-        this.partCollection = partCollection;
-    }
-
-    public Collection<Note> getNoteCollection() {
-        return noteCollection;
-    }
-
-    public void setNoteCollection(Collection<Note> noteCollection) {
-        this.noteCollection = noteCollection;
     }
 
 }

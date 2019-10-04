@@ -21,9 +21,6 @@ public class Category implements Serializable {
     @JoinColumn(name = "icon_id", referencedColumnName = "id")
     private Icon icon;
 
-    @OneToMany(mappedBy = "category", fetch = FetchType.EAGER)
-    private Collection<Event> eventCollection;
-
     public Category() {
     }
 
@@ -49,13 +46,5 @@ public class Category implements Serializable {
 
     public void setIcon(Icon icon) {
         this.icon = icon;
-    }
-
-    public Collection<Event> getEventCollection() {
-        return eventCollection;
-    }
-
-    public void setEventCollection(Collection<Event> eventCollection) {
-        this.eventCollection = eventCollection;
     }
 }
