@@ -1,1 +1,1 @@
-web: java -jar target/com.sibur.involvement.server-1.0-SNAPSHOT.war
+web: bundle exec rails server -p $PORT
