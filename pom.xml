@@ -18,7 +18,7 @@
                     <target>8</target>
                 </configuration>
             </plugin>
-            <!--plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
@@ -30,15 +30,15 @@
                         </manifest>
                     </archive>
                 </configuration>
-            </plugin-->
-            <plugin>
+            </plugin>
+            <!--plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
-            </plugin>
+            </plugin-->
                  
             <plugin>
                 <groupId>com.heroku.sdk</groupId>
@@ -46,7 +46,7 @@
                 <version>2.0.11</version>
                 <configuration>
                     <processTypes>
-                        <web>java $JAVA_OPTS -cp target/* Main</web>
+                        <web>java $JAVA_OPTS -cp target/classes:target/dependency/* MainClass</web>
                     </processTypes>
                 </configuration>
             </plugin>
