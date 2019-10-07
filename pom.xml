@@ -65,8 +65,8 @@
         <javax.servlet-api.version>3.0.1</javax.servlet-api.version>
     </properties>
 
-    <packaging>war</packaging>
-    <!--packaging>jar</packaging-->
+    <!--packaging>war</packaging-->
+    <packaging>jar</packaging>
 
     <dependencies>
         <!-- Web -->
