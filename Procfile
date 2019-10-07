@@ -1,3 +1,1 @@
-web: `bundle exec rails server -p $PORT`
-
-worker: `env QUEUE=* bundle exec rake resque:work`
+web: java $JAVA_OPTS -cp target/* Main
