@@ -39,7 +39,21 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin-->
+<<<<<<< HEAD
 
+=======
+                 
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>2.0.11</version>
+                <configuration>
+                    <processTypes>
+                        <web>java $JAVA_OPTS -cp target/classes:target/dependency/* MainClass</web>
+                    </processTypes>
+                </configuration>
+            </plugin>
+>>>>>>> 6a688066dc12d6b94b93ed53aaaf21195481e43f
         </plugins>
     </build>
     <properties>
